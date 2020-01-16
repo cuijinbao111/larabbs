@@ -44,6 +44,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+            \App\Http\Middleware\AcceptHeader::class,//默认请求头
             'throttle:60,1',
             'bindings',
         ],
